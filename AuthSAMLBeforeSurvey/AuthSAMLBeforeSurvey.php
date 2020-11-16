@@ -30,6 +30,11 @@ class AuthSAMLBeforeSurvey extends PluginBase {
             'label' => 'SAML authentication source',
             'default' => 'default-sp',
         ),
+        'samlmailmapping' => array(
+            'type' => 'string',
+            'label' => 'SAML attributed used as email',
+            'default' => 'mail',
+        ),
     );
     
     public function init()
@@ -48,6 +53,8 @@ class AuthSAMLBeforeSurvey extends PluginBase {
 	    $ssp = $this->get_saml_instance();
         
         $ssp->requireAuth();
+
+        $this->log($this->getUserMail());
 
     }
 
@@ -71,4 +78,23 @@ class AuthSAMLBeforeSurvey extends PluginBase {
         return $this->ssp;
     }
     
+     /**
+     * Get Userdata from SAML Attributes
+     * @return void
+     */
+
+    public function getUserMail() {
+        
+        $mail = '';
+        $ssp = $this->get_saml_instance();
+        $attributes = $this->ssp->getAttributes();
+        if (!empty($attributes)) {
+            $saml_mail_mapping = $this->get('saml_mail_mapping', null, null, 'mail');
+            if (array_key_exists($saml_mail_mapping , $attributes) && !empty($attributes[$saml_mail_mapping])) {
+                $mail = $attributes[$saml_mail_mapping][0];
+            }
+        }
+        
+        return $mail;
+    }
 }

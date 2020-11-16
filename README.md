@@ -16,3 +16,10 @@ Limesurvey Authentication plugin for SAML authentication before display survey p
 - Unzip the file and upload the plugin in the Limesurvey Plugin Manager.
 - Configure the plugin.
 - Activate the plugin.
+
+
+### This plugin is based on the following LimeSurvey Plugins:
+ - https://github.com/Frankniesten/Limesurvey-SAML-Authentication
+ - https://github.com/LimeSurvey/LimeSurvey/blob/master/application/core/plugins/Authwebserver/Authwebserver.php
+ - https://github.com/LimeSurvey/LimeSurvey/blob/master/application/core/plugins/AuthLDAP/AuthLDAP.php
+ - https://github.com/pitbulk/limesurvey-saml

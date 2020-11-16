@@ -13,6 +13,7 @@
  * 
  */
 
+
 class myAuth extends PluginBase {
 
     protected $storage = 'DbStorage';

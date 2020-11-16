@@ -20,12 +20,12 @@ class AuthSAMLBeforeSurvey extends PluginBase {
     static protected $description = 'Core: SAML authentication before Survey Page';
     
     protected $settings = array(
-        'bs-simplesamlphp_path' => array(
+        'simplesamlphppath' => array(
             'type' => 'string',
             'label' => 'Path to the SimpleSAMLphp folder',
             'default' => '/usr/share/simplesamlphp',
         ),
-        'bs-saml_authsource' => array(
+        'samlauthsource' => array(
             'type' => 'string',
             'label' => 'SAML authentication source',
             'default' => 'default-sp',
@@ -59,11 +59,11 @@ class AuthSAMLBeforeSurvey extends PluginBase {
         
         if ($this->ssp == null) {
             
-            $simplesamlphp_path = $this->get('bs-simplesamlphp_path', null, null, '/var/www/simplesamlphp');
+            $simplesamlphp_path = $this->get('simplesamlphppath', null, null, '/var/www/simplesamlphp');
             
             require_once($simplesamlphp_path.'/lib/_autoload.php');
             
-            $saml_authsource = $this->get('bs-saml_authsource', null, null, 'limesurvey');
+            $saml_authsource = $this->get('samlauthsource', null, null, 'limesurvey');
             
             $this->ssp = new \SimpleSAML\Auth\Simple($saml_authsource);
 	    }

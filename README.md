@@ -1,5 +1,5 @@
 # Limesurvey-SAML-Authentication-BeforeSurvey
-Limesurvey Authentication plugin for SAML authentication before display survey page
+Limesurvey Authentication simple plugin for SAML authentication before display survey page
 
 ## Requirements
 - LimeSurvey 3.14+

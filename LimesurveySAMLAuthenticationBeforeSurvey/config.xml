@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <metadata>
+        <name>SAML Before Survey</name>
+        <type>plugin</type>
+        <creationDate>2020-11-16</creationDate>
+        <lastUpdate>2020-11-17</lastUpdate>
+        <author>Paolo Moresco</author>
+        <authorUrl>https://github.com/cedia-idm/Limesurvey-SAML-Authentication-BeforeSurvey</authorUrl>
+        <version>1.0.0</version>
+        <license>GNU General Public License version 3</license>
+        <description><![CDATA[Core: SAML authentication]]></description>
+    </metadata>
+
+    <compatibility>
+        <version>4.0</version>
+    </compatibility>
+
+    <updaters disabled="disabled">
+    </updaters>
+</config>

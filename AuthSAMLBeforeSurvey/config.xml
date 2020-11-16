@@ -11,11 +11,9 @@
         <license>GNU General Public License version 3</license>
         <description><![CDATA[Core: SAML authentication]]></description>
     </metadata>
-
     <compatibility>
         <version>4.0</version>
     </compatibility>
-
     <updaters disabled="disabled">
     </updaters>
 </config>
